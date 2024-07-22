@@ -1,0 +1,296 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #00110B;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('images/trident_banner.png');
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.header_logo {
+    height: 110px;
+    opacity: 0.5;
+}
+
+
+.header_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.nav{
+    font-family: 'Monolog';
+    font-size: 35px;
+    padding-top: 5px;
+    align-items: center;
+}
+
+.nav_text{
+    padding: 10px;
+    opacity: 0.5;
+}
+
+.nav_text_selected {
+    padding: 10px;
+    opacity: 1;
+}
+
+.lang_img {
+    width: 35px;
+    height: 35px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+
+
+.trident_logo {
+    margin: 0 auto;
+    padding-left: 225px;
+    height: 275px;
+}
+
+.trident_logo_img {
+    width: 80%;
+}
+
+
+
+.trident_ip {
+    font-family: 'F77 Minecraft';
+    font-size: 35px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.trident_ip_text {
+    color: #00EA97;
+}
+
+.trident_soon_text {
+    color: #00EA97;
+    opacity: 0.5;
+}
+
+
+
+
+.mods_and_version_title {
+    font-family: 'F77 Minecraft';
+    padding-top: 50px;
+}
+
+.mods_and_version_text {
+    color: white;
+    font-size: 60px;
+}
+
+.mods_and_version_nav_selected {
+    color: #00EA97;
+    font-size: 35px;
+    float: right;
+    margin-right: 30px;
+    padding-top: 10px;
+}
+
+.mods_and_version_nav {
+    color: #00EA97;
+    opacity: 0.5;
+    font-size: 35px;
+    float: right;
+    margin-right: 30px;
+    padding-top: 10px;
+}
+
+
+
+.mods_and_version {
+    display: flex;
+}
+
+
+
+.mod_list {
+    font-family: 'F77 Minecraft';
+    font-size: 35px;
+    padding-top: 20px;
+    width: 425px;
+}
+
+.mod_list_modrinth {
+    color: #00EA97;
+    position: absolute;
+}
+
+.mod_list_archive {
+    color: #00EA97;
+    position: absolute;
+    padding-top: 18px;
+}
+
+.mod_list_or {
+    color: white;
+    opacity: 0.5;
+    padding-left: 70px;
+    position: absolute;
+
+    margin-top: 10px;
+}
+
+.mod_list_or2 {
+    color: white;
+    opacity: 0.5;
+    padding-left: 70px;
+    position: absolute;
+
+    margin-top: 34px;
+}
+
+.mod_list_mods {
+    color: #00EA97;
+    margin-top: 65px;
+    position: absolute;
+}
+
+.mod_list_mods_loader {
+    color: #00EA97;
+    margin-top: 48px;
+    position: absolute;
+}
+
+.mod_list_expand {
+    font-family: "F77 Minecraft";
+    font-size: 35px;
+    color: #00EA97;
+    opacity: 0.5;
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+    margin-top: 65px;
+}
+
+#menu {
+    display: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.mod_list_menu {
+    display: none;
+    margin-top: 10px;
+}
+
+.mod_list_menu_ul {
+    padding: 0px;
+    margin: 0;
+}
+
+.mod_list_menu_li {
+    list-style-type: none;
+}
+
+.mod_list_expandable {
+    color: #00EA97;
+    position: absolute;
+    margin-top: 55px;
+
+    max-height: 0;
+    transition: max-height 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+
+.version {
+    font-family: 'F77 Minecraft';
+    padding-top: 20px;
+    width: 450px;
+}
+
+.version_text {
+    color: white;
+    font-size: 40px;
+}
+
+.ver_pirate {
+    color: white;
+    font-size: 25px;
+    opacity: 0.5;
+    margin-top: 15px;
+}
+
+.ver_whitelist {
+    color: white;
+    font-size: 25px;
+    opacity: 0.5;
+    margin-top: 15px;
+}
+
+.ver_howto {
+    color: #00EA97;
+    font-size: 25px;
+    opacity: 0.5;
+}
+
+.ver_playerlist {
+    color: #00EA97;
+    font-size: 25px;
+    margin-top: 15px;
+    opacity: 0.5;
+}
+
+
+
+.status {
+    font-family: 'F77 Minecraft';
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+.status_title {
+    font-size: 40px;
+    color: white;
+    padding-bottom: 13px;
+}
+
+.status_text {
+    font-size: 35px;
+    color: #CF6161;
+}
+
+.status_subtext {
+    font-size: 25px;
+    color: white;
+    opacity: 0.5;
+}
+
+
+
+
+.youtube_video {
+    padding-top: 1488px;
+}

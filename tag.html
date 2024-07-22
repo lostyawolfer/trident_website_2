@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="assets/css/tag.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>lostya's tag</title>
+    </head>
+<body>
+    <div class="bg">
+        <video autoplay muted loop class="bg_video" src="assets/css/videos/tag_bg.mp4"></video>
+    </div>
+    <header class="header">
+        <div class="container">
+            <div class="header_content">
+                <a href="main.html"><img src="assets/css/images/websitelogo.png" alt="" class="header_logo"></a>
+                <nav class="nav">
+                    <a href="trident.html" class="nav_text">trident</a>
+                    <a href="tag.html" class="nav_text_selected">lostya's tag</a>
+                    <a href="music.html" class="nav_text" data-lang="nav_my_music">моя музыка</a>
+                    <a href="hosting.html" class="nav_text" data-lang="nav_hosting">хостинг</a>
+                </nav>
+                <div class="lang">
+                    <img src="assets/css/images/english.png" alt="" class="lang_img" data-lang="en">
+                    <img src="assets/css/images/ukrainian.png" alt="" class="lang_img" data-lang="uk">
+                    <img src="assets/css/images/russian.png" alt="" class="lang_img" data-lang="ru">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="main_inner">
+                <div class="main_content">
+                    <img src="assets/css/images/tag_logo_alpha.png" alt="" class="tag_img">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        let selectedLanguage = localStorage.getItem('selectedLanguage') || 'ru';
+
+        const elementsToTranslate = document.querySelectorAll('[data-lang]');
+        const translations = {
+            ru: {
+                nav_my_music: 'моя музыка',
+                nav_hosting: 'хостинг',
+
+            },
+            en: {
+                nav_my_music: 'my music',
+                nav_hosting: 'hosting',
+
+            },
+            uk: {
+                nav_my_music: 'моя музика',
+                nav_hosting: 'хостінг',
+
+            }
+        };
+
+        document.querySelectorAll('.lang_img').forEach(img => {
+            img.addEventListener('click', () => {
+                selectedLanguage = img.getAttribute('data-lang');
+                localStorage.setItem('selectedLanguage', selectedLanguage);
+                updateText();
+            });
+        });
+
+        function updateText() {
+            elementsToTranslate.forEach(element => {
+                const translationKey = element.getAttribute('data-lang');
+                if (translations[selectedLanguage][translationKey]) {
+                    element.innerHTML = translations[selectedLanguage][translationKey];
+                }
+            });
+        }
+
+        updateText();
+
+    </script>
+</body>
+</html>

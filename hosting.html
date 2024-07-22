@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="assets/css/hosting.css">
+    <link rel="icon" href="assets/css/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/css/images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lostyawolfer</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header_content">
+                <a href="main.html"><img src="assets/css/images/websitelogo.png" alt="" class="header_logo"></a>
+                <nav class="nav">
+                    <a href="trident.html" class="nav_text">trident</a>
+                    <a href="tag.html" class="nav_text">lostya's tag</a>
+                    <a href="music.html" class="nav_text" data-lang="nav_my_music">моя музыка</a>
+                    <a href="hosting.html" class="nav_text_selected" data-lang="nav_hosting">хостинг</a>
+                </nav>
+                <div class="lang">
+                    <img src="assets/css/images/english.png" alt="" class="lang_img" data-lang="en">
+                    <img src="assets/css/images/ukrainian.png" alt="" class="lang_img" data-lang="uk">
+                    <img src="assets/css/images/russian.png" alt="" class="lang_img" data-lang="ru">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="main_inner">
+                <div class="main_content">
+                    <div class="main_text1">
+                        <p class="main_title1" data-lang="wanna_host">хочешь хостить у меня?</p>
+                        <p class="main_description" data-lang="wanna_host_description">из-за того что дтек родипы и отключают свет, хостить серверы у меня - очень плохая идея.<br>не смотря на это нашёлся один гений который хостит свой майн сервер у меня</p>
+                    </div>
+                    <div class="main_text2">
+                        <p class="main_title2" data-lang="my_servers">серверы под моим крылом</p>
+                        <p class="main_description" data-lang="my_servers_list"><a href="https://doladu.net.ua"
+                                class="link">popapopka123</a> (владелец: <b>artzabaz</b>)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        let selectedLanguage = localStorage.getItem('selectedLanguage') || 'ru';
+
+        const elementsToTranslate = document.querySelectorAll('[data-lang]');
+        const translations = {
+            ru: {
+                nav_my_music: 'моя музыка',
+                nav_hosting: 'хостинг',
+
+                wanna_host: 'хочешь хостить у меня?',
+                wanna_host_description: 'из-за того что дтек родипы и отключают свет, хостить серверы у меня - очень плохая идея.<br>не смотря на это нашёлся один гений который хостит свой майн сервер у меня',
+
+                my_servers: 'серверы под моим крылом',
+                my_servers_list: '<a href="https://doladu.net.ua" class="link">popapopka123</a> (владелец: <b>artzabaz</b>)',
+            },
+            en: {
+                nav_my_music: 'my music',
+                nav_hosting: 'hosting',
+
+                wanna_host: 'want to host using me?',
+                wanna_host_description: 'because some guys decided to test their bombs on some ukrainian powerplants we lose electricity all the time, so it\'s a very bad idea.<br>however one of my friends still wants to use me so well... it\'s his problem now',
+
+                my_servers: 'servers that are hosted by me',
+                my_servers_list: '<a href="https://doladu.net.ua" class="link">popapopka123</a> (owned by: <b>artzabaz</b>)',
+            },
+            uk: {
+                nav_my_music: 'моя музика',
+                nav_hosting: 'хостінг',
+
+                wanna_host: 'хочеш хостити в мене?',
+                wanna_host_description: 'через те що дтек родіпи і вимикають світло, хостити в мене це дуже погана ідея.<br>незважаючи на це один мій друг вирішив хостити свій майн сервер в мене',
+
+                my_servers: 'сервери під моїм крилом',
+                my_servers_list: '<a href="https://doladu.net.ua" class="link">popapopka123</a> (володар: <b>artzabaz</b>)',
+            }
+        };
+
+        document.querySelectorAll('.lang_img').forEach(img => {
+            img.addEventListener('click', () => {
+                selectedLanguage = img.getAttribute('data-lang');
+                localStorage.setItem('selectedLanguage', selectedLanguage);
+                updateText();
+            });
+        });
+
+        function updateText() {
+            elementsToTranslate.forEach(element => {
+                const translationKey = element.getAttribute('data-lang');
+                if (translations[selectedLanguage][translationKey]) {
+                    element.innerHTML = translations[selectedLanguage][translationKey];
+                }
+            });
+        }
+
+        updateText();
+
+    </script>
+</body>
+
+</html>

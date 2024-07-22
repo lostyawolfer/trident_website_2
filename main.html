@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="icon" href="assets/css/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/css/images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lostyawolfer</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header_content">
+                <a href="main.html"><img src="assets/css/images/websitelogo.png" alt="" class="header_logo"></a>
+                <nav class="nav">
+                    <a href="trident.html" class="nav_text">trident</a>
+                    <a href="tag.html" class="nav_text">lostya's tag</a>
+                    <a href="music.html" class="nav_text" data-lang="nav_my_music">моя музыка</a>
+                    <a href="hosting.html" class="nav_text" data-lang="nav_hosting">хостинг</a>
+                </nav>
+                <div class="lang">
+                    <img src="assets/css/images/english.png" alt="" class="lang_img" data-lang="en">
+                    <img src="assets/css/images/ukrainian.png" alt="" class="lang_img" data-lang="uk">
+                    <img src="assets/css/images/russian.png" alt="" class="lang_img" data-lang="ru">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="main_inner">
+                <div class="main_content">
+                    <div class="main_text1">
+                        <p class="main_title1" data-lang="who_am_i">хто я?</p>
+                        <p class="main_description" data-lang="who_am_i_description">какой-то рандом из инета, которому
+                            16.<br>держу сервер в майне и делаю миниигру.<br>иногда музыку пишу ещё хз<br>кстати,
+                            попробовал написать сайт (ты на него смотришь прямо сейчас)</p>
+                    </div>
+                    <div class="main_text2">
+                        <p class="main_title2" data-lang="where_am_i">где я?</p>
+                        <p class="main_description"><b>telegram</b> <a href="https://t.me/lostyawolfer"
+                                class="link">@lostyawolfer</a></p>
+                        <p class="main_description"><b>discord</b> <a
+                                href="https://discord.com/users/534097411048603648" class="link">@lostyawolfer</a></p>
+                        <p class="main_description"><b>youtube</b> <a href="https://youtube.com/@lostyawolfer"
+                                class="link">@lostyawolfer</a></p>
+                        <p class="main_description"><b>bereal</b> <a href="https://bere.al/lostyawolfer"
+                                class="link">@lostyawolfer</a></p>
+                        <p class="main_secondary_description" data-lang="tt_dont_use"><b>tiktok</b> не пользуюсь</p>
+                        <p class="main_secondary_description" data-lang="in_dont_use"><b>inst</b> не пользуюсь</p>
+                        <p class="main_secondary_description" data-lang="vb_dont_use"><b>viber</b> nah</p>
+                        <p class="main_secondary_description" data-lang="of_dont_use"><b>onlyfans</b> скоро будет</p>
+                    </div>
+                </div>
+                <div class="main_widget">
+                    <div class="telegram-widget">
+                        <img src="assets/css/images/channel_pic.png" alt="" class="profile-pic">
+                        <h1>ЭТО Я</h1>
+                        <p class="subscribers" data-lang="tg_subs">28 подписчиков</p>
+                        <p class="description">
+                            <span>🧡 стена профиля <a href="https://t.me/lostyawolfer">@lostyawolfer</a></span><br>
+                            <span>⚡ <a
+                                    href="https://t.me/lostyawolfer_blog?boost">t.me/lostyawolfer_blog?boost</a></span><br>
+                            <span><br>chief executive at balls inc.<br>fuck it, we ball<br><br>мне 16 лет (д/р 11 янв
+                                ♑️)<br>каналу 1 год (д/р 10 апр ♈️)<br>не спрашивайте почему я праздную д/р
+                                канала</span>
+                        </p>
+                        <a href="https://t.me/lostyawolfer_blog" class="telegram-button" data-lang="tg_view">ПОСМОТРЕТЬ
+                            В TELEGRAM</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        let selectedLanguage = localStorage.getItem('selectedLanguage') || 'ru';
+
+        const elementsToTranslate = document.querySelectorAll('[data-lang]');
+        const translations = {
+            ru: {
+                nav_my_music: 'моя музыка',
+                nav_hosting: 'хостинг',
+
+                who_am_i: 'хто я?',
+                who_am_i_description: 'какой-то рандом из инета, которому 16.<br>держу сервер в майне и делаю миниигру.<br>иногда музыку пишу ещё хз<br>кста, попробовал написать сайт (ты на него смотришь прямо сейчас)',
+
+                where_am_i: 'где я?',
+                tt_dont_use: '<b>tiktok</b> не пользуюсь',
+                in_dont_use: '<b>inst</b> не пользуюсь',
+                vb_dont_use: '<b>viber</b> nah',
+                of_dont_use: '<b>onlyfans</b> скоро будет',
+
+                tg_subs: '27 подписчиков',
+                tg_view: 'ПОСМОТРЕТЬ В TELEGRAM',
+            },
+            en: {
+                nav_my_music: 'my music',
+                nav_hosting: 'hosting',
+
+                who_am_i: 'who am i?',
+                who_am_i_description: 'some random 16-year-old.<br>i have a minecraft server and a minigame.<br>sometimes i write music too<br>btw i tried coding a website (you\'re looking at it as we speak)',
+                
+                where_am_i: 'where am i?',
+                tt_dont_use: '<b>tiktok</b> not using it',
+                in_dont_use: '<b>inst</b> not using it',
+                vb_dont_use: '<b>viber</b> nah',
+                of_dont_use: '<b>onlyfans</b> will be there soon',
+
+                tg_subs: '27 subscribers',
+                tg_view: 'VIEW IN TELEGRAM',
+            },
+            uk: {
+                nav_my_music: 'моя музика',
+                nav_hosting: 'хостінг',
+
+                who_am_i: 'хто я?',
+                who_am_i_description: 'якийсь рандом з інета, якому 16.<br>тримаю сервер в майні й роблю мінігру.<br>іноді музику пишу ще хз<br>до речі, спробував написати сайт (ти на нього дивишся просто зараз)',
+                
+                where_am_i: 'де я?',
+                tt_dont_use: '<b>tiktok</b> не користуюсь',
+                in_dont_use: '<b>inst</b> не користуюсь',
+                vb_dont_use: '<b>viber</b> nah',
+                of_dont_use: '<b>onlyfans</b> незабаром буде',
+                
+                tg_subs: '27 підписників',
+                tg_view: 'ПЕРЕГЛЯНУТИ У TELEGRAM',
+            }
+        };
+
+        document.querySelectorAll('.lang_img').forEach(img => {
+            img.addEventListener('click', () => {
+                selectedLanguage = img.getAttribute('data-lang');
+                localStorage.setItem('selectedLanguage', selectedLanguage);
+                updateText();
+            });
+        });
+
+        function updateText() {
+            elementsToTranslate.forEach(element => {
+                const translationKey = element.getAttribute('data-lang');
+                if (translations[selectedLanguage][translationKey]) {
+                    element.innerHTML = translations[selectedLanguage][translationKey];
+                }
+            });
+        }
+
+        updateText();
+
+    </script>
+</body>
+
+</html>
