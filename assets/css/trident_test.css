@@ -1,0 +1,675 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #00110B;
+    font-family: Arial, sans-serif;
+    /* Added a default font family */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+p {
+    text-decoration: none;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('images/trident_banner.png');
+    position: relative;
+    position: fixed;
+    z-index: 10;
+    background-repeat: no-repeat;
+    /* Added position relative for proper stacking context */
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.header_logo {
+    height: 110px;
+    opacity: 0.5;
+}
+
+
+.header_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.nav{
+    font-family: 'Monolog';
+    font-size: 35px;
+    padding-top: 5px;
+    align-items: center;
+}
+
+.nav_text{
+    padding: 10px;
+    opacity: 0.5;
+}
+
+.nav_text_selected {
+    padding: 10px;
+    opacity: 1;
+}
+
+.lang_img {
+    width: 35px;
+    height: 35px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.header_logo_phone {
+    display: none;
+}
+
+.toggle {
+    display: none;
+}
+
+
+
+.trident_logo {
+    margin: 0 auto;
+    padding-left: 225px;
+    height: 275px;
+}
+
+.trident_logo_img {
+    width: 80%;
+}
+
+
+
+.trident_ip {
+    font-family: 'F77 Minecraft';
+    font-size: 35px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.trident_ip_text {
+    color: #EFBC12;
+}
+
+.trident_soon_text {
+    color: #EFBC12;
+    opacity: 0.5;
+}
+
+
+
+
+.mods_and_version_title {
+    font-family: 'F77 Minecraft';
+    padding-top: 50px;
+}
+
+.mods_and_version_text {
+    color: white;
+    font-size: 60px;
+}
+
+.mods_and_version_nav_selected {
+    color: #00EA97;
+    font-size: 35px;
+    float: right;
+    margin-right: 30px;
+    padding-top: 10px;
+}
+
+.mods_and_version_nav {
+    color: #00EA97;
+    opacity: 0.5;
+    font-size: 35px;
+    float: right;
+    margin-right: 30px;
+    padding-top: 10px;
+}
+
+
+
+.mods_and_version {
+    display: flex;
+}
+
+
+
+.mod_list {
+    font-family: 'F77 Minecraft';
+    font-size: 35px;
+    padding-top: 20px;
+    width: 425px;
+}
+
+.mod_list_modrinth {
+    color: #00EA97;
+}
+
+.mod_list_archive {
+    color: #00EA97;
+    padding-top: 10px;
+}
+
+.mod_list_or {
+    color: white;
+    opacity: 0.5;
+    padding-left: 70px;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.mod_list_mods {
+    color: #00EA97;
+    padding: 0;
+    margin: 0;
+
+    padding-top: 5px;
+}
+
+.mod_list_mods_loader {
+    color: #00EA97;
+    padding-bottom: 15px;
+}
+
+
+.server_description {
+    margin-top: 30px;
+    font-family: 'F77 Minecraft';
+    font-size: 30px;
+}
+
+.server_description_text {
+    color: white;
+}
+
+.server_description_text2 {
+    color: white;
+    padding-top: 5px;
+}
+
+.server_description_link {
+    color: #00EA97;
+}
+
+
+.mod_list_expand {
+    font-family: "F77 Minecraft";
+    font-size: 35px;
+    color: #00EA97;
+    opacity: 0.5;
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+
+    padding-top: 10px;
+}
+
+#menu {
+    display: none;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.mod_list_menu {
+    display: none;
+    transition: max-height 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.mod_list_menu_ul {
+    padding: 0;
+    margin: 0;
+}
+
+.mod_list_menu_li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.version {
+    font-family: 'F77 Minecraft';
+    padding-top: 20px;
+    width: 450px;
+}
+
+.version_text {
+    color: white;
+    font-size: 40px;
+}
+
+.ver_pirate {
+    color: white;
+    font-size: 25px;
+    opacity: 0.5;
+    margin-top: 15px;
+}
+
+.ver_whitelist {
+    color: white;
+    font-size: 25px;
+    opacity: 0.5;
+    margin-top: 15px;
+}
+
+.ver_howto {
+    color: #00EA97;
+    font-size: 25px;
+    opacity: 0.5;
+}
+
+.ver_playerlist {
+    color: #00EA97;
+    font-size: 25px;
+    margin-top: 15px;
+    opacity: 0.5;
+}
+
+
+
+.status {
+    font-family: 'F77 Minecraft';
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+.status_title {
+    font-size: 40px;
+    color: white;
+    padding-bottom: 13px;
+}
+
+.status_text {
+    font-size: 35px;
+    color: #96cf61;
+}
+
+.status_subtext {
+    font-size: 25px;
+    color: white;
+    opacity: 0.5;
+}
+
+
+
+
+.youtube_video {
+    display: block;
+    padding-top: 50px;
+    padding-left: 20px;
+}
+
+
+
+@media (max-width: 1400px) {
+    .container {
+        width: 1300px;
+    }
+
+    .trident_logo {
+        height: 250px;
+    }
+}
+
+@media (max-width: 1325px) {
+    .container {
+        width: 1200px;
+    }
+
+    .mods_and_version_nav_selected {
+        font-size: 32px;
+    }
+    
+    .mods_and_version_nav {
+        font-size: 32px;
+    }
+
+    .mods_and_version_text {
+        font-size: 55px;
+    }
+
+    .mod_list {
+        font-size: 32px;
+    }
+
+    .mod_list_expand {
+        font-size: 32px;
+    }
+
+    .status_subtext {
+        font-size: 20px;
+    }
+
+    .trident_logo {
+        padding-left: 200px;
+        height: 230px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .container {
+        width: 1150px;
+    }
+
+    .mods_and_version_nav_selected {
+        font-size: 30px;
+    }
+    
+    .mods_and_version_nav {
+        font-size: 30px;
+    }
+
+    .mods_and_version_text {
+        font-size: 50px;
+    }
+
+    .trident_logo {
+        padding-left: 180px;
+        height: 210px;
+    }
+}
+
+
+@media (max-width: 1175px) {
+    .container {
+        width: 1100px;
+    }
+
+    .mods_and_version_nav_selected {
+        font-size: 30px;
+    }
+    
+    .mods_and_version_nav {
+        font-size: 30px;
+    }
+
+    .mods_and_version_text {
+        font-size: 45px;
+    }
+
+    .mod_list {
+        font-size: 29px;
+    }
+
+    .mod_list_expand {
+        font-size: 29px;
+    }
+
+    .status_subtext {
+        font-size: 18px;
+    }
+
+    .trident_logo {
+        padding-left: 170px;
+        height: 200px;
+    }
+
+    .trident_ip {
+        font-size: 33px;
+    }
+}
+
+
+@media (max-width: 1115px) {
+    .container {
+        width: 1025px;
+    }
+
+    .mods_and_version_nav_selected {
+        font-size: 28px;
+    }
+    
+    .mods_and_version_nav {
+        font-size: 28px;
+    }
+
+    .mods_and_version_text {
+        font-size: 40px;
+    }
+
+    .mod_list {
+        font-size: 27px;
+    }
+
+    .mod_list_expand {
+        font-size: 27px;
+    }
+
+    .status_subtext {
+        font-size: 17px;
+    }
+
+    .trident_logo {
+        padding-left: 160px;
+        height: 190px;
+    }
+
+    .trident_ip {
+        font-size: 31px;
+    }
+}
+
+
+@media (max-width: 1115px) {
+    .container {
+        width: 1025px;
+    }
+
+    .mods_and_version_nav_selected {
+        font-size: 28px;
+    }
+    
+    .mods_and_version_nav {
+        font-size: 28px;
+    }
+
+    .mods_and_version_text {
+        font-size: 40px;
+    }
+
+    .mod_list {
+        font-size: 27px;
+    }
+
+    .mod_list_expand {
+        font-size: 27px;
+    }
+
+    .status_subtext {
+        font-size: 17px;
+    }
+
+    .trident_logo {
+        padding-left: 160px;
+        height: 180px;
+    }
+
+    .trident_ip {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 1045px) {
+    .container {
+        width: 980px;
+    }
+
+    .mods_and_version_nav_selected {
+        font-size: 27px;
+    }
+    
+    .mods_and_version_nav {
+        font-size: 27px;
+    }
+
+    .mods_and_version_text {
+        font-size: 37px;
+    }
+
+    .mod_list {
+        font-size: 26px;
+    }
+
+    .mod_list_expand {
+        font-size: 26px;
+    }
+
+    .status_subtext {
+        font-size: 16px;
+    }
+
+    .nav {
+        font-size: 32px;
+    }
+
+    .trident_logo {
+        padding-left: 150px;
+        height: 170px;
+    }
+
+    .trident_ip {
+        font-size: 29px;
+    }
+}
+
+
+
+@media (max-width: 1000px) {
+    .container {
+        width: 900px;
+    }
+
+    .mods_and_version_nav_selected {
+        font-size: 26px;
+    }
+    
+    .mods_and_version_nav {
+        font-size: 26px;
+    }
+
+    .mods_and_version_text {
+        font-size: 36px;
+    }
+
+    .mod_list {
+        font-size: 25px;
+    }
+
+    .mod_list_expand {
+        font-size: 25px;
+    }
+
+    .status_subtext {
+        font-size: 15px;
+    }
+
+    .nav {
+        font-size: 29px;
+    }
+
+    .trident_logo {
+        padding-left: 140px;
+        height: 160px;
+    }
+
+    .trident_ip {
+        font-size: 28px;
+    }
+}
+
+
+@media (max-width: 915px) {
+    .container {
+        width: 800px;
+    }
+
+    .mods_and_version_nav_selected {
+        font-size: 25px;
+    }
+    
+    .mods_and_version_nav {
+        font-size: 25px;
+    }
+
+    .mods_and_version_text {
+        font-size: 35px;
+    }
+
+    .mod_list {
+        font-size: 24px;
+    }
+
+    .mod_list_expand {
+        font-size: 24px;
+    }
+
+    .status_subtext {
+        font-size: 14px;
+    }
+
+    .nav {
+        font-size: 28px;
+    }
+
+    .trident_logo {
+        padding-left: 130px;
+        height: 150px;
+    }
+
+    .trident_ip {
+        font-size: 27px;
+    }
+
+    .mods_and_version {
+        display: block;
+    }
+
+    .status {
+        padding-left: 0;
+    }
+
+
+
+    .desktop-nav {
+        display: none;
+    }
+
+    #toggle:checked~.mobile-nav {
+        display: block;
+        /* Show mobile navigation when checkbox is checked */
+        position: absolute;
+        top: 0px;
+        /* Adjust top position to avoid overlap with header */
+        right: 0;
+        background-image: linear-gradient(to bottom, #FF7A00, #FF7A00, #FF7A00, #FF7A00, #FF7A00, #FF7A0000);
+        /* Match background color of body */
+        width: 100%;
+        height: 700px;
+        box-sizing: border-box;
+        padding: 20px;
+        z-index: 1;
+        /* Ensure mobile navigation is above body content */
+    }
+}

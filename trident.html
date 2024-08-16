@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="assets/css/trident.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trident</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header_content">
+                <a href="main.html"><img src="assets/css/images/websitelogo_black.png" alt="" class="header_logo"></a>
+                <nav class="nav">
+                    <a href="trident.html" class="nav_text_selected">trident</a>
+                    <a href="tag.html" class="nav_text">lostya's tag</a>
+                    <a href="music.html" class="nav_text" data-lang="nav_my_music">моя музыка</a>
+                    <a href="hosting.html" class="nav_text" data-lang="nav_hosting">хостинг</a>
+                </nav>
+                <div class="lang">
+                    <img src="assets/css/images/english.png" alt="" class="lang_img" data-lang="en">
+                    <img src="assets/css/images/ukrainian.png" alt="" class="lang_img" data-lang="uk">
+                    <img src="assets/css/images/russian.png" alt="" class="lang_img" data-lang="ru">
+                </div>
+            </div>
+            <div class="trident_logo">
+                <img src="assets/css/images/trident_logo.png" alt="" class="trident_logo_img">
+            </div>
+            <div class="trident_ip">
+                <a class="trident_ip_text">tr.lostyawolfer.com</a><br>
+                <a class="trident_soon_text" data-lang="ip_subtext">IX сезон</a>
+            </div>
+            <div class="mods_and_version_title">
+                <a class="mods_and_version_text" data-lang="mods_and_version_lang">Моды и версия</h1>
+                    <a href="#" class="mods_and_version_nav">Hardcore</a>
+                    <a href="#" class="mods_and_version_nav">Test Realm</a>
+                    <a href="#" class="mods_and_version_nav_selected">Trident</a>
+            </div>
+            <div class="mods_and_version">
+                <div class="mod_list">
+                    <a href="assets/css/mods/tr9 mods 0.0.3.mrpack" class="mod_list_modrinth"
+                        download="tr9 mods 0.0.3.mrpack" data-lang="modrinth_profile">профиль modrinth</a>
+                    <p class="mod_list_or" data-lang="or">- или -</p>
+                    <a href="#" class="mod_list_archive" data-lang="mod_archive">архив модов</a>
+                    <p class="mod_list_or" data-lang="or">- или -</p>
+                    <p class="mod_list_mods_loader"><a href="assets/css/mods/fabric-installer-1.0.1.exe" class="mod_list_mods_loader"
+                        download="fabric-installer-1.0.1.exe">fabric loader</a></p>
+                    <p class="mod_list_mods"><a href="assets/css/mods/fabric-api-0.97.1+1.20.4.jar" class="mod_list_mods"
+                        download="fabric-api-0.97.1+1.20.4.jar">fabric api</a></p>
+                    <p class="mod_list_mods"><a href="assets/css/mods/bclib-3.30.1.jar" class="mod_list_mods" download="bclib-3.30.1.jar">betterx
+                        library</a></p>
+                    <p class="mod_list_mods"><a href="assets/css/mods/better-end-4.30.1.jar" class="mod_list_mods"
+                        download="better-end-4.30.1.jar">better end</a></p>
+                    <nav class="mod_list_menu" id="menu">
+                        <ul class="mod_list_menu_ul">
+                            <li class="mod_list_menu_li">
+                                <p class="mod_list_mods"><a href="#" class="mod_list_mods">test mod 1</a></p>
+                                <p class="mod_list_mods"><a href="#" class="mod_list_mods">test mod 2</a></p>
+                                <p class="mod_list_mods"><a href="#" class="mod_list_mods">test mod 3</a></p>
+                                <p class="mod_list_mods"><a href="#" class="mod_list_mods">test mod 4</a></p>
+                                <p class="mod_list_mods"><a href="#" class="mod_list_mods">test mod 5</a></p>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button class="mod_list_expand" id="expandToggleBtn" data-lang="more_mods">↓ 12 more mods</button>
+                </div>
+                <div class="version">
+                    <p class="version_text">Fabric 1.20.4</p>
+                    <p class="ver_pirate" data-lang="cracked">пиратка поддерживается</p>
+                    <p class="ver_whitelist" data-lang="whitelist">включён белый список</p>
+                    <a href="#" class="ver_howto" data-lang="how_to">как стать участником?</a>
+                </div>
+                <div class="status">
+                    <p class="status_title" data-lang="status">Статус</p>
+                    <p class="status_text" data-lang="status_text_lang">онлайн</p>
+                    <p class="status_subtext" data-lang="status_subtext_lang">0 игроков в сети</p>
+                </div>
+            </div>
+            <div class="server_description">
+                <p class="server_description_text">Худший сервер выживания, на котором только можно играть.<p>
+                <p class="server_description_text2">Это даже не анархия. Заинтересовало? <a href="#" class="server_description_link">Как стать участником</a></p>
+                    
+            </div>
+            <div class="youtube_video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/GIqJ1NuP06c" frameborder="0"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="main_inner">
+                <div class="main_content">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        let selectedLanguage = localStorage.getItem('selectedLanguage') || 'ru';
+
+        const elementsToTranslate = document.querySelectorAll('[data-lang]');
+        const translations = {
+            ru: {
+                nav_my_music: 'моя музыка',
+                nav_hosting: 'хостинг',
+
+                ip_subtext: 'IX сезон',
+                
+                mods_and_version_lang: 'Моды и версия',
+                modrinth_profile: 'профиль modrinth',
+                mod_archive: 'архив модов',
+                more_mods: '↓ ещё 12 модов',
+                more_mods_collapse: '↑ свернуть',
+                or: '- или -',
+                or_2: 'полный список модов',
+
+                cracked: 'пиратка поддерживается',
+                whitelist: 'включён белый список',
+                how_to: 'как стать участником?',
+                playerlist: 'список игроков',
+
+                status: 'Статус',
+                status_text_lang: 'онлайн',
+                status_subtext_lang: '0 игроков в сети',
+            },
+            en: {
+                nav_my_music: 'my music',
+                nav_hosting: 'hosting',
+
+                ip_subtext: 'season IX',
+                
+                mods_and_version_lang: 'Mods & version',
+                modrinth_profile: 'modrinth profile',
+                mod_archive: 'mod archive',
+                more_mods: '↓ 12 more mods',
+                more_mods_collapse: '↑ collapse',
+                or: '- or -',
+                or_2: 'full mod list',
+
+                cracked: 'cracked accounts work',
+                whitelist: 'whitelist enabled',
+                how_to: 'how to become a member?',
+                playerlist: 'player list',
+
+                status: 'Status',
+                status_text_lang: 'online',
+                status_subtext_lang: '0 players online',
+            },
+            uk: {
+                nav_my_music: 'моя музика',
+                nav_hosting: 'хостінг',
+
+                ip_subtext: 'IX сезон',
+                
+                mods_and_version_lang: 'Моди й версія',
+                modrinth_profile: 'профіль modrinth',
+                mod_archive: 'архів модів',
+                more_mods: '↓ ще 12 модів',
+                more_mods_collapse: '↑ згорнути',
+                or: '- або -',
+                or_2: 'повний список модів',
+
+                cracked: 'піратка підтримується',
+                whitelist: 'білий список ввімкнено',
+                how_to: 'як стати учасником?',
+                playerlist: 'список гравців',
+
+                status: 'Статус',
+                status_text_lang: 'онлайн',
+                status_subtext_lang: '0 гравців зараз грають',
+            }
+        };
+
+        document.querySelectorAll('.lang_img').forEach(img => {
+            img.addEventListener('click', () => {
+                selectedLanguage = img.getAttribute('data-lang');
+                localStorage.setItem('selectedLanguage', selectedLanguage);
+                updateText();
+            });
+        });
+
+        function updateText() {
+            elementsToTranslate.forEach(element => {
+                const translationKey = element.getAttribute('data-lang');
+                if (translations[selectedLanguage][translationKey]) {
+                    element.innerHTML = translations[selectedLanguage][translationKey];
+                }
+            });
+        }
+
+        updateText();
+
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const expandToggleBtn = document.getElementById('expandToggleBtn');
+            const menu = document.getElementById('menu');
+
+            expandToggleBtn.addEventListener('click', () => {
+                if (menu.style.maxHeight && menu.style.display === 'block') {
+                    // закрыть меню
+                    menu.style.display = 'none';
+                    menu.style.maxHeight = menu.scrollHeight + "px";
+                    if (selectedLanguage == 'ru') {
+                        expandToggleBtn.textContent = '↓ ещё 12 модов';
+                    }
+                    if (selectedLanguage == 'uk') {
+                        expandToggleBtn.textContent = '↓ ще 12 модів';
+                    }
+                    if (selectedLanguage == 'en') {
+                        expandToggleBtn.textContent = '↓ 12 more mods';
+                    }
+                } else {
+                    // открыть меню
+                    menu.style.display = 'block';
+                    menu.style.maxHeight = menu.scrollHeight + "px";
+                    if (selectedLanguage == 'ru') {
+                        expandToggleBtn.textContent = '↑ свернуть';
+                    }
+                    if (selectedLanguage == 'uk') {
+                        expandToggleBtn.textContent = '↑ згорнути';
+                    }
+                    if (selectedLanguage == 'en') {
+                        expandToggleBtn.textContent = '↑ collapse';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

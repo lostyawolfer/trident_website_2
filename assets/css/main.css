@@ -26,6 +26,7 @@ p {
     background-image: url('images/gradient.png');
     position: relative;
     position: fixed;
+    z-index: 10;
     /* Added position relative for proper stacking context */
 }
 
@@ -69,6 +70,19 @@ p {
     transition: 0.2s ease;
 }
 
+.nav_logo_phone {
+    width: 40%;
+    opacity: 1;
+    transition: 0.2s ease;
+}
+
+.nav_logo_phone:hover {
+    opacity: 1;
+    transition: 0.2s ease;
+}
+
+
+
 .desktop-nav {
     display: flex;
     justify-content: space-between;
@@ -96,6 +110,7 @@ p {
     display: none;
     /* Hide hamburger by default */
     cursor: pointer;
+    z-index: 15;
 }
 
 .toggle {
@@ -114,6 +129,10 @@ p {
     height: 3px;
     background-color: white;
     margin: 5px auto;
+}
+
+.header_logo_phone {
+    display: none;
 }
 
 .main_title1 {
@@ -220,7 +239,13 @@ h1 {
     }
 
     .header_logo {
-        height: 80px;
+        display: none;
+    }
+
+    .header_logo_phone {
+        height: 60px;
+        display: block;
+        margin-top: 10px;
     }
 
     .mobile-nav {
@@ -244,10 +269,10 @@ h1 {
         top: 0px;
         /* Adjust top position to avoid overlap with header */
         right: 0;
-        background-image: linear-gradient(to bottom, #FF7A00, #FF7A00, #FF7A00, #FF7A00, #FF7A0000);
+        background-image: linear-gradient(to bottom, #FF7A00, #FF7A00, #FF7A00, #FF7A00, #FF7A00, #FF7A0000);
         /* Match background color of body */
         width: 100%;
-        height: 550px;
+        height: 700px;
         box-sizing: border-box;
         padding: 20px;
         z-index: 1;
@@ -294,6 +319,10 @@ h1 {
         max-width: 992px;
     }
 
+    .nav {
+        font-size: 30px;
+    }
+
 
     .main_title1 {
         font-size: 45px;
@@ -313,6 +342,19 @@ h1 {
 @media (min-width: 768px) and (max-width:991px) {
     .container {
         max-width: 768px;
+    }
+
+    .header_logo {
+        width: 80px;
+        height: 80px;
+        padding-top: 10px;
+    }
+
+    .nav {
+        font-size: 25px;
+    }
+    .nav_text {
+        padding: 5px;
     }
 
 
@@ -368,6 +410,21 @@ h1 {
     .container {
         max-width: 620px;
     }
+
+
+    .header_logo {
+        width: 80px;
+        height: 80px;
+        padding-top: 10px;
+    }
+
+    .nav {
+        font-size: 20px;
+    }
+    .nav_text {
+        padding: 5px;
+    }
+
 
 
     .main_title1 {
@@ -442,6 +499,18 @@ h1 {
         max-width: 570px;
     }
 
+    .header_logo {
+        width: 80px;
+        height: 80px;
+        padding-top: 10px;
+    }
+
+    .nav {
+        font-size: 25px;
+    }
+    .nav_text {
+        padding: 0px;
+    }    
 
     .main_title1 {
         font-size: 40px;
@@ -513,6 +582,10 @@ h1 {
 @media (max-width:570px) {
     .container {
         max-width: 530px;
+    }
+
+    .header_content {
+        justify-content: left;
     }
 
     .main_title1 {
