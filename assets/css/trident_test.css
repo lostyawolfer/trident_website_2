@@ -20,12 +20,15 @@ p {
 
 
 
+.mods_and_version_title_newline {
+    display: none;
+}
+
 .header {
     width: 100%;
     height: 100vh;
     background-image: url('images/trident_banner.png');
     position: relative;
-    position: fixed;
     z-index: 10;
     background-repeat: no-repeat;
     /* Added position relative for proper stacking context */
@@ -134,7 +137,6 @@ p {
     font-size: 35px;
     float: right;
     margin-right: 30px;
-    padding-top: 10px;
 }
 
 .mods_and_version_nav {
@@ -143,7 +145,6 @@ p {
     font-size: 35px;
     float: right;
     margin-right: 30px;
-    padding-top: 10px;
 }
 
 
@@ -552,6 +553,14 @@ p {
     .trident_ip {
         font-size: 29px;
     }
+
+    .version_text{
+        font-size: 35px;
+    }
+
+    .status_text {
+        font-size: 30px;
+    }
 }
 
 
@@ -589,6 +598,10 @@ p {
         font-size: 29px;
     }
 
+    .nav_text{
+        padding: 5px;
+    }
+
     .trident_logo {
         padding-left: 140px;
         height: 160px;
@@ -596,6 +609,15 @@ p {
 
     .trident_ip {
         font-size: 28px;
+    }
+
+
+    .version_text{
+        font-size: 30px;
+    }
+
+    .status_text {
+        font-size: 25px;
     }
 }
 
@@ -607,11 +629,108 @@ p {
 
     .mods_and_version_nav_selected {
         font-size: 25px;
+        margin-right: 15px;
+        float: left;
+        margin-bottom: 25px;
+        margin-top: 10px;
+    }
+    
+    .mods_and_version_nav {
+        font-size: 25px;
+        margin-right: 15px;
+        float: left;
+        margin-bottom: 25px;
+        margin-top: 10px;
+    }
+
+    .mods_and_version_title_newline {
+        display: block;
+    }
+
+
+    .version_text{
+        padding-top: 20px;
+        font-size: 30px;
+    }
+
+
+    .mods_and_version_text {
+        font-size: 35px;
+    }
+
+    .mod_list {
+        font-size: 24px;
+    }
+
+    .mod_list_expand {
+        font-size: 24px;
+    }
+
+    .status_subtext {
+        font-size: 14px;
+    }
+
+    .nav {
+        font-size: 28px;
+    }
+
+    .trident_logo {
+        padding-left: 130px;
+        height: 150px;
+    }
+
+    .trident_ip {
+        font-size: 27px;
+    }
+
+    .mods_and_version {
+        display: block;
+    }
+
+    .status {
+        padding-left: 0;
+    }
+
+
+
+    .desktop-nav {
+        display: none;
+    }
+
+    #toggle:checked~.mobile-nav {
+        display: block;
+        /* Show mobile navigation when checkbox is checked */
+        position: absolute;
+        top: 0px;
+        /* Adjust top position to avoid overlap with header */
+        right: 0;
+        background-image: linear-gradient(to bottom, #FF7A00, #FF7A00, #FF7A00, #FF7A00, #FF7A00, #FF7A0000);
+        /* Match background color of body */
+        width: 100%;
+        height: 700px;
+        box-sizing: border-box;
+        padding: 20px;
+        z-index: 1;
+        /* Ensure mobile navigation is above body content */
+    }
+}
+
+
+
+
+@media (max-width: 815px) {
+    .container {
+        width: 700px;
+    }
+
+    .mods_and_version_nav_selected {
+        font-size: 25px;
     }
     
     .mods_and_version_nav {
         font-size: 25px;
     }
+
 
     .mods_and_version_text {
         font-size: 35px;
