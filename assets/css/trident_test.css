@@ -70,6 +70,21 @@ p {
     opacity: 1;
 }
 
+.hamburger {
+    display: none;
+    /* Hide hamburger by default */
+    cursor: pointer;
+    z-index: 15;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px auto;
+}
+
 .lang_img {
     width: 35px;
     height: 35px;
@@ -692,9 +707,69 @@ p {
     }
 
 
+    .nav_line {
+        padding: 0px;
+        margin: 5px;
+        border: 1px solid black;
+        opacity: 25%;
+    }
+
+    .nav_line_bottom {
+        padding: 0px;
+        margin-top: 5px;
+        border: 2px solid black;
+        opacity: 50%;
+    }
+    
+
 
     .desktop-nav {
         display: none;
+    }
+
+    
+    .header_logo {
+        display: none;
+    }
+
+    .header_logo_phone {
+        height: 60px;
+        display: block;
+        margin-top: 10px;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+    .mobile-nav {
+        display: none;
+        /* Hide mobile navigation by default */
+    }
+
+    .nav_text {
+        display: block;
+        padding: 10px 0;
+        opacity: 1;
+        /* Reset opacity for mobile navigation */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        /* Add bottom border between links */
+    }
+
+    .nav_text:last-child {
+        border-bottom: none;
+        /* Remove bottom border from last link */
+    }
+
+
+
+    .hamburger {
+        display: block;
+        /* Show hamburger */
+        z-index: 2;
+        /* Ensure hamburger is above other elements */
+        position: absolute;
+        top: 20px;
+        right: 20px;
     }
 
     #toggle:checked~.mobile-nav {
